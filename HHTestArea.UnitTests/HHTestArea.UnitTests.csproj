@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HHTestArea\HHTestArea.csproj" />
+    <ProjectReference Include="..\HHTestAreaLib\HHTestAreaLib.csproj" />
   </ItemGroup>
 
 </Project>
