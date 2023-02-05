@@ -13,7 +13,7 @@ namespace HHTestArea
 
         public override double Area()
         {
-            if(Radius > 0) return 3.14f * Math.Pow(Radius, 2);
+            if(Radius > 0) return Math.Round(3.14f * Math.Pow(Radius, 2),2);
             return 0;
         }
     }

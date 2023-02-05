@@ -35,17 +35,19 @@ namespace HHTestArea
                 throw new ShapeException("Сторона(ы) треугольника не могут быть равны 0");
             }
 
-            if (a > (b + c) || b > (a + c) || c > (a + b))
+            if ( a >= (b + c) || b >= (a + c) || c >= (a + b))
             {
-                throw new ShapeException("Сторона треугольника не можнт быть больше суммы двух других!");
+                throw new ShapeException("Такого треугольника не существует!");
             }
 
             return true;
         }
-        public bool isTrungleStright(double a, double b, double c) =>
-        
-            a > (b + c)||b>(a+b) || c > (a+c);
-        
-       
+        public bool isTrungleStright() =>
+
+                               sideA == Math.Sqrt(Math.Pow(sideB, 2) + Math.Pow(sideC, 2))
+                            || sideB == Math.Sqrt(Math.Pow(sideA, 2) + Math.Pow(sideC, 2))
+                            || sideC == Math.Sqrt(Math.Pow(sideA, 2) + Math.Pow(sideB, 2));
+
+
     }
 }
